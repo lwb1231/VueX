@@ -21,6 +21,13 @@ export default{
     }
   },
   methods: {
+    getData () {
+      var url = process.env.NODE_URL + '/users/findUsers'
+      var data = {}
+      this.$https.post(url, data).then(res => {
+        console.log(res)
+      })
+    },
     fun () {
       this.$router.push({name: 'About', params: {name: '123'}})
     },
@@ -31,6 +38,7 @@ export default{
   mounted () {
     console.log(this.$route.query.id)
     console.log(this.$store.state.count)
+    this.getData()
   },
   components: {
     headCom

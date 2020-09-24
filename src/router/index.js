@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/view/home'
 import Login from '@/view/login'
 import About from '@/view/about'
+import Test from '@/view/test'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ var router = new Router({
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test
     }
   ]
 })
